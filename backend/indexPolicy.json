@@ -1,0 +1,38 @@
+{
+  "indexingMode": "consistent",
+  "automatic": true,
+  "includedPaths": [
+    { "path": "/*" },
+    {
+      "path": "/code/?",
+      "indexes": [
+        { "kind": "Range", "dataType": "String", "precision": -1 }
+      ]
+    },
+    {
+      "path": "/status/?",
+      "indexes": [
+        { "kind": "Range", "dataType": "String", "precision": -1 }
+      ]
+    },
+    {
+      "path": "/examCode/?",
+      "indexes": [
+        { "kind": "Range", "dataType": "String", "precision": -1 }
+      ]
+    },
+    {
+      "path": "/name/?",
+      "indexes": [
+        { "kind": "Range", "dataType": "String", "precision": -1 }
+      ]
+    },
+    {
+      "path": "/createdAt/?",
+      "indexes": [
+        { "kind": "Range", "dataType": "Number", "precision": -1 }
+      ]
+    }
+  ],
+  "excludedPaths": []
+}

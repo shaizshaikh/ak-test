@@ -1,0 +1,31 @@
+##installing  mongo shell 
+choco install mongodb-shell -y
+
+az cosmosdb create ^
+--name akshat-db ^
+--resource-group poona_student ^
+--kind MongoDB ^
+--locations regionName=canadacentral failoverPriority=0 ^
+--default-consistency-level Session
+
+
+
+##get your cosmos connection string
+az cosmosdb keys list ^
+  --name akshat-db ^
+  --resource-group poona_student ^
+  --type connection-strings
+
+
+
+##update cosmos db server version for mongo
+az cosmosdb update ^
+  --name akshat-db ^
+  --resource-group poona_student ^
+  --server-version 4.2
+
+
+
+
+##applying the env for azure web app.
+az webapp config appsettings set --resource-group poona_student --name ak-test --settings @azure-config.json
